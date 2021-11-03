@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 
+import org.aspectj.weaver.ast.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -60,6 +61,11 @@ public class PrepAvengerController {
 		@Autowired
 		private EmailService emailservice;
 		
+		
+		@GetMapping("/welcome")
+		public String Test() {
+			return "Hello";
+		}
 		
 		@GetMapping("/home")
 		public User Testing() {
